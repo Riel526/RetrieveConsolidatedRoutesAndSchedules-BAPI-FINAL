@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="retrieveconsolidatedroutesandschedulesBAPI-test-suite.xml" />
+	<munit:test name="retrieveconsolidatedroutesandschedulesBAPI-test-suite-retrieveconsolidatedroutesandschedulesxpapi-mainTest" doc:id="cc1a5a25-a38f-4fdc-b4fa-485cb876ae55" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to retrieveconsolidatedroutesandschedulesxpapi-main" doc:id="1b1a99a7-ba8f-4be4-a487-c5ec73fe7a5e" name="retrieveconsolidatedroutesandschedulesxpapi-main"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="2567da84-c18c-4fc0-bc7a-36bd6c6bc36f" message="Payload is Null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
